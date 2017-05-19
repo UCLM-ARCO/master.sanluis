@@ -10,8 +10,8 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  config.ssh.username = 'sanluis'
-  config.ssh.password = 'sanluis'
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
   config.ssh.insert_key = 'true'
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.

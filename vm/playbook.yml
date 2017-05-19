@@ -3,10 +3,14 @@
 - hosts: all
   sudo: true
   tasks:
+  - name: update
+    apt: name=python-apt update_cache=yes
   - name: Install python-apt
     apt: name=python-apt state=latest
   - name: install python-dev
     apt: pkg=python-dev state=latest
+  - name: install python-pip
+    apt: pkg=python-pip state=latest
   - name: upgrade pip
     pip: name=pip extra_args=--upgrade
   - name: install config
