@@ -1,0 +1,26 @@
+# playbook.yml
+---
+- hosts: all
+  sudo: true
+  tasks:
+  - name: Install python-apt
+    apt: name=python-apt state=latest
+  - name: install python-dev
+    apt: pkg=python-dev state=latest
+  - name: upgrade pip
+    pip: name=pip extra_args=--upgrade
+  - name: install config
+    pip: name=configparser
+  - name: install openjdk
+    apt: pkg=curl state=latest
+  - name: install build-essential
+    apt: pkg=build-essential state=latest
+  - name: install linux-headers
+    action: shell apt-get install -y linux-headers-$(uname -r)
+  - name: install emacs
+    apt: pkg=emacs state=latest
+  - name: NEO4J_REST_URL=http://localhost:7474/db/data/
+    lineinfile:
+      dest=/home/vagrant/.bashrc
+      regexp="^export NEO4J_REST_URL=http://neo4j:neo4j@localhost:7474/db/data"
+      line="export NEO4J_REST_URL=http://neo4j:neo4j@localhost:7474/db/data"
