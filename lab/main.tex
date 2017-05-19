@@ -1,0 +1,57 @@
+\documentclass[english]{arco-report}
+
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,latexsym}
+%%\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage[table,xcdraw]{xcolor}
+
+%%\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%-- PAY ATTENTION TO COMMENT LINES FOR CLASS USAGE --
+
+%-- You can select an available entity:
+% \selectEntityARCO
+% \selectEntityESI
+
+%-- Or set fields one by one:
+\def \entityAcro{CCCP}
+\def \entityName{CitiSim Itea3 project}
+\def \entityLogo {\includegraphics[width=3cm]{/usr/share/arco/figures/arco_entity.pdf}}
+\def \entityWatermark {
+  \put(-55,-310){
+    \includegraphics[width=1.1\textwidth]{/usr/share/arco/figures/uclm_logo_watermark.pdf}}
+}
+
+%-- You should identify your document too:
+\def \docTopic {CitiSim work document}
+\ISRN{CitiSim}{0.1}
+% \docid{13.2}
+
+\title{IoT platforms: CitiSim analysis}
+\author{felixjesus.villanueva@uclm.es}
+\date{Last modification 9/02/2017}
+
+\begin{document}
+\maketitle
+
+
+
+%\input{fiware.tex}
+\input{iot-arch.tex}
+%\input{ehealth-standards.tex}
+%\input{iot-pilot-multimodal-habits.tex}
+%Una cita~\cite{Cannon}.
+\bibliography{main}
+
+\end{document}
+
+
+% Local Variables:
+% coding: utf-8
+% mode: latex
+% mode: flyspell
+% ispell-local-dictionary: "castellano8"
+% End:
