@@ -1,0 +1,62 @@
+\chapter{Especificación protocolos capa de aplicación}
+Una de las principales labores a la hora de desarrollar un sistema
+distribuido es la definición de las interfaces y del protocolo de
+comunicaciones de nivel de aplicación entre las diversas partes que
+forman parte del sistema distribuido. El objetivo de este documento no
+es otro que mostrar un ejemplo sencillo del diseño y especificación de
+una interfaz de comunicaciones y un protocolo de comunicaciones para el
+control de forma remota de un coche desde una estación de control.
+\subsection{Especificación del protocolo}
+Un protocolo queda completamente especificado si definimos su
+semántica, sintaxis y temporización, no obstante, para obtener
+esta especificación debemos dar una serie de pasos previos. En cualquier caso
+el diseño de protocolos es un proceso iterativo que puede dar lugar
+a modificaciones a la hora de su implementación.
+
+La especificación de la funcionalidad es el primer paso donde se debe
+especificar la funcionalidad esperada del protocolo/interfaz, se deben
+describir las partes involucradas y lo que se espera de la interacción
+entre las partes. Si como diseñador debe acometer la tarea de realizar una
+especificación de la funcionalidad de un protocolo lo ideal es que sea lo menos
+ambigua posible, es decir, no esté sujeta a interpretaciones ya que si son
+diferentes programadores los que están involucrados en la implementación
+del protocolo, una especificación ambigua originará muchos problemas a la hora
+de integrar las diferentes partes.
+
+La especificación debería incluir:
+%
+\begin{itemize}
+\item Una descripción genérica explicando la funcionalidad.
+\item Los servicios que proveerá y requerirá el protocolo.
+\item Especificación de entidades y su relación.
+\item Especificación de protocolos entre entidades (Si hay varias entidades usando diversos protocolos).
+\item Lista de tipos y formatos de los mensajes intercambiados entre entidades.
+\item Temporización describiendo la secuencia de intercambio de mensajes para cada servicio.
+\item Definición de interfaces y estructuras de datos en Protobuf.
+\end{itemize}
+
+De forma ideal, en protocolos complejos, se debería realizar una descripción formal de cara a eliminar incoherencias y a, en el mejor de los casos, automatizar la generación de las implementaciones y simplificar la verificación.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{overview.png}
+\caption{Protocolo a implementar} \label{fig:overview}
+\end{figure}
+
+\subsection{Descripción genérica}
+Se trata de diseñar un protocolo de control, es decir, defina
+sintaxis, semántica y temporización para el control de un \emph{Unmanned
+Ground Vehicle (UGV)} de forma que la comunicación entre la \emph{Estación
+Base (EB)} y el vehículo permita monitorizarlo y controlarlo a través
+de la red de carreteras nacional. La estación base es un
+dispositivo de cómputo con los periféricos adecuados (por ejemplo,
+pantalla, teclado, volante/joystick, pedales, etc. ) que permitirá
+controlar un UGV a distancia.
+\begin{itemize}
+\item Puede asumir que su protocolo se
+encapsulará sobre una conexión TCP/IP entre cada UGV y la EB.
+\item Cada UGV tendrá una dirección IP estática, única y conocida.
+\end{itemize}
+Para simplificar esta descripción el UGV es un coche de marchas
+convencional y asumimos que el lector conoce cómo se conduce un coche
+de este tipo de acuerdo a las normas internacionales de circulación.
