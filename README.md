@@ -2,11 +2,12 @@
 
 Doc and examples for the master of San Luis.
 
-### What is this repository for? ###
+### Directorios ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* iot: Internet of things
+* lab: actividades de laboratorio
+* vm: máquina virtual del curso.
+* ssdd: Conceptos de sistemas distribuidos.
 
 ### How do I get set up? ###
 
