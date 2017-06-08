@@ -9,7 +9,6 @@ try:
     serverupdated = SmartObject.AnalogSinkPrx.checkedCast(base)
     if not serverupdated:
         raise RuntimeError("Invalid proxy")
-
     serverupdated.update("Cocina",28.0,None,None);
 except:
     traceback.print_exc()

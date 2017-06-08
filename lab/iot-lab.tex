@@ -1,6 +1,16 @@
-\chapter{Internet of Things laboratorio}
+\chapter{Actividades Internet of Things}
 
-\section{Pasarela}
+\section{Diseño de arquitectura de aplicaciones}
+Para las siguientes aplicaciones, esboze la arquitectura del sistema, proponga un nodo/Tecnología de conectividad/pasarela. Analice el coste de la solución propuesta.
+\begin{itemize}
+\item Localización de ganado bobino en areas rurales, análisis de patrones.
+\item Monitorización de flujos de agua subterraneas (tuberías) en ciudades para evitar pérdidas.
+\item Monitorización de plazas de parking libres en un supermercado.
+\item Monitorización de cuencas fluviales.
+\item Gestión inteligente de tráfico (control de semáforos, sensores de tráfico)
+\end{itemize}
+
+\section{Configuración de la Pasarela/s}
 \begin{itemize}
 \item Como forma de tolerancia a fallos, usted decide poner tres pasarelas entre su red IoT e Internet.
   \begin{itemize}
@@ -12,7 +22,7 @@
 
 \section{MQTT}
 
-\section{Topología}
+\section{Topología Ad-Hoc}
 Las redes de sensores inalámbricas son unas redes formadas por nodos de bajo coste dotados con una tecnología inalámbrica (por ejemplo 802.15.4e). Una de las configuraciones mas habituales de ese tipo de redes es la comunicación multisalto. Esta configuración es usada para extender el alcance de comunicación de cada uno de los nodos gracias a que cada uno de los nodos enruta la información del resto hacia la pasarela. La pasarela envía toda la información a través de un interfaz mas apropiado (por ejemplo, un modem LTE). El problema es que un nodo sólo puede enrutar tráfico estando en estado DESPIERTO ya que en estado DORMIDO no recibe ningún tipo de mensaje. De forma adicional, un nodo constantemente DESPIERTO consume mucha batería por lo que hay que mantener el mínimo número de nodos despiertos imprescindible para que la información pueda llegar a la pasarela. Se le pide que diseñe un algoritmo a ejecutar en cada uno de los nodos de la red, de forma que:
 
 Al final de la ejecución del algoritmo, un nodo decida si está DESPIERTO o DORMIDO.
