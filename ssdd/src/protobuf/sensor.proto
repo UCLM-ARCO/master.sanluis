@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+message Sensor{
+    required int32 Id = 1;
+
+    enum SensorType{
+       UNKNOWN=0;
+       HUMIDITY = 1;
+       ACCELEROMETER = 2;
+       PRESSURE =3;
+    }
+
+    optional SensorType Type = 2 [default = UNKNOWN];
+    optional float value = 3;
+    optional string unit = 4;
+}
