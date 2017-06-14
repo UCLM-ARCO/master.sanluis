@@ -1,0 +1,7 @@
+DEPENDS: gcc
+
+$ make printmessage
+cc     printmessage.c   -o printmessage
+$ ./printmessage hello
+hello
+Message Delivered!

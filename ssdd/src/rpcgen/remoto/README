@@ -1,0 +1,15 @@
+Dependencias: librería libnsl.so
+	      rpcgen-> libc-dev-bin 
+
+$ make
+cc -g    -c -o msg_client.o msg_client.c
+cc -g    -c -o msg_clnt.o msg_clnt.c
+cc -g     -o msg_client msg_client.o msg_clnt.o  -lnsl 
+cc -g    -c -o msg_svc.o msg_svc.c
+cc -g    -c -o msg_server.o msg_server.c
+cc -g     -o msg_server msg_svc.o msg_server.o  -lnsl
+$ ./msg_server &
+[1] 14810
+$ ./msg_client localhost distribuidos
+Servidor RPC: distribuidos
+
