@@ -21,14 +21,7 @@ int main(int argc, char *argv[])
   unsigned int length;
   struct hostent *server_name;
   struct sockaddr_in localAddr, clientAddr;
-  struct position otherplayer;
-  struct position player;
-
-  otherplayer.userID=9;
-  otherplayer.x=10;
-  otherplayer.y=10;
-  otherplayer.z=0;
-  otherplayer.rotation[0][0]=2;
+  struct position sensor;
 
   serviceSocket = socket( AF_INET, SOCK_DGRAM, 0 );
   localAddr.sin_family = AF_INET;
@@ -37,9 +30,8 @@ int main(int argc, char *argv[])
   
   length = sizeof(clientAddr);
   bind( serviceSocket, (struct sockaddr *)&localAddr, sizeof(localAddr) );
-  recvfrom(serviceSocket, &player, sizeof(struct position), 0, (struct sockaddr *)&clientAddr, &length );
-  printf("Player ID:%d is in position %f,%f,%f with orientation %f",player.userID,player.x, player.y, player.z, player.rotation[0][0]);
-  sendto(serviceSocket, &otherplayer, sizeof(struct position), 0, (struct sockaddr *)&clientAddr, length );
+  recvfrom(serviceSocket, &sensor, sizeof(struct position), 0, (struct sockaddr *)&clientAddr, &length );
+  printf("Coche ID:%d is in position %f,%f,%f with orientation %f",sensor.userID,sensor.x, sensor.y, sensor.z, sensor.rotation[0][0]);
   return 0;
 }
 
