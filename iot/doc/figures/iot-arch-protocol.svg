@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50.517426mm"
+   height="32.245338mm"
+   viewBox="0 0 50.517426 32.245338"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="iot-arch-protocol.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="162.03311"
+     inkscape:cy="-57.277981"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.9494099,-8.2970936)">
+    <g
+       id="g4502"
+       transform="translate(-14.164613,-17.395681)">
+      <rect
+         y="45.292912"
+         x="23.179623"
+         height="6.2928543"
+         width="50.392326"
+         id="rect10"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.119;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text852"
+         y="49.825127"
+         x="43.395901"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="49.825127"
+           x="43.395901"
+           id="tspan850"
+           sodipodi:role="line">Física</tspan></text>
+    </g>
+    <g
+       id="g4507"
+       transform="translate(-12.964946,-10.535558)">
+      <rect
+         y="31.477861"
+         x="21.979956"
+         height="6.9549322"
+         width="50.38623"
+         id="rect10-3"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.12509596;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text856"
+         y="36.270493"
+         x="41.230282"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="36.270493"
+           x="41.230282"
+           id="tspan854"
+           sodipodi:role="line">Enlace</tspan></text>
+    </g>
+    <g
+       id="g4516"
+       transform="translate(-53.052333,-33.954376)">
+      <rect
+         y="68.144455"
+         x="62.067337"
+         height="6.2928543"
+         width="50.392326"
+         id="rect10-6"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.119;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text4511"
+         y="72.606049"
+         x="83.898506"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="72.606049"
+           x="83.898506"
+           id="tspan4509"
+           sodipodi:role="line">Red</tspan></text>
+    </g>
+    <g
+       id="g4525"
+       transform="translate(-60.94288,-8.5937282)">
+      <rect
+         y="23.243177"
+         x="69.95179"
+         height="6.2928543"
+         width="50.392326"
+         id="rect10-7"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.119;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text4520"
+         y="27.308584"
+         x="85.876343"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="27.308584"
+           x="85.876343"
+           id="tspan4518"
+           sodipodi:role="line">Transporte</tspan></text>
+    </g>
+    <g
+       id="g4534"
+       transform="translate(-12.96799,-5.5321488)">
+      <rect
+         y="13.888742"
+         x="21.976908"
+         height="6.2928543"
+         width="50.392326"
+         id="rect10-5"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.119;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text4529"
+         y="18.079033"
+         x="38.295059"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="18.079033"
+           x="38.295059"
+           id="tspan4527"
+           sodipodi:role="line">Aplicación</tspan></text>
+    </g>
+  </g>
+</svg>
