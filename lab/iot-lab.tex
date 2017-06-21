@@ -1,13 +1,13 @@
-\chapter{Actividades Internet of Things}
+\chapter{Arquitectura de \emph{Internet of Things}}
 
 \section{Diseño de arquitectura de aplicaciones}
-Para las siguientes aplicaciones, esboze la arquitectura del sistema, proponga un nodo/Tecnología de conectividad/pasarela. Analice el coste de la solución propuesta.
+Para las siguientes aplicaciones, esboze la arquitectura del sistema, proponga un nodo/Tecnología de conectividad/pasarela. Analice el coste de la solución propuesta en cuanto al hardware.
 \begin{itemize}
-\item Localización de ganado bobino en areas rurales, análisis de patrones.
-\item Monitorización de flujos de agua subterraneas (tuberías) en ciudades para evitar pérdidas.
-\item Monitorización de plazas de parking libres en un supermercado.
-\item Monitorización de cuencas fluviales.
-\item Gestión inteligente de tráfico (control de semáforos, sensores de tráfico)
+\item Localización de ganado bobino en areas rurales con el objeto de análisis de patrones de comportamiento (localización). El punto de control se encuentra en la propia granja.
+\item Monitorización de flujos de agua subterraneas (tuberías) en ciudades para evitar pérdidas. El punto de control se encuentra en el ayuntamiento.
+\item Monitorización de plazas de parking libres en un gran supermercado. El punto de control se encuentra en el supermercado. Los usuarios acceden a dicha información mediante una app.
+\item Monitorización de cuencas fluviales de rios. El ministerio de agricultura recolecta toda la información.
+\item Gestión inteligente de tráfico (control de semáforos, sensores de tráfico, señalización inteligente, etc.) El ayuntamiento analiza la información, la interacción entre semáforos, tráfico y señalización inteligente es entre el vehiculo y la infraestructura.
 \end{itemize}
 
 \section{Configuración de la Pasarela/s}
@@ -16,13 +16,38 @@ Para las siguientes aplicaciones, esboze la arquitectura del sistema, proponga u
   \begin{itemize}
   \item ¿Cómo evito que me llegen los mensajes por triplicado?
   \item ¿Necesito enviar tres mensajes distintos desde un sensor?
-  \item ¿Cómo compruebo que todos los nodos están vivos?
+  \item ¿Cómo compruebo que todos los nodos están vivos? ¿Es escalable esta solución?
+  \item Una pasarela con una limitación de un 1\% \emph{duty cycle} y que sólo envía ACKs de 10 ms, ¿cuantos ACK puede mandar en un día?, ¿cómo limita este número al número de dispositivos que puede atender una única pasarela? ¿Cuantos dispositivos puede atender la pasarela si cada dispositivo envía 10 mensajes a la hora?
   \end{itemize}
 \end{itemize}
 
 \section{MQTT}
+\begin{itemize}
+	\item Atendiendo a la dirección de red del broker MQTT, envíe un mensaje a Argentina/SanLuis/USL/master con su nombre completo.
+	\item 5 clientes denominados A,B,C,D y E se han subscrito a los eventos MQTT en los siguientes canales:
+	\begin{itemize}
+		\item Cliente A: Argentina/
+		\item Cliente B: Argentina/SanLuis
+		\item Cliente C: Argentina/SanLuis/calleluis
+		\item Cliente D: Argentina/sanLuis/calleluis
+		\item Cliente E: Argentina/SanLuis/calleluis/4
+	\end{itemize} 
+	\item para los subscriptores anteriores, publique un mensaje con contenido "on" en los siguientes canales e indique qué clientes lo reciben:
+	\begin{itemize}
+		\item /Argentina
+		\item Argentina/\#
+		\item Argentina/?/calleluis
+		\item Argentina/?
+		\item Argentina/SanLuis/?
+		\item Argentina
+		\item ?/\#
+		\item \#/?
+		\item \#
+		\item ?
+	\end{itemize}
+\end{itemize}
 
-\section{Topología Ad-Hoc}
+\section{Gestión de topologías Ad-Hoc}
 Las redes de sensores inalámbricas son unas redes formadas por nodos de bajo coste dotados con una tecnología inalámbrica (por ejemplo 802.15.4e). Una de las configuraciones mas habituales de ese tipo de redes es la comunicación multisalto. Esta configuración es usada para extender el alcance de comunicación de cada uno de los nodos gracias a que cada uno de los nodos enruta la información del resto hacia la pasarela. La pasarela envía toda la información a través de un interfaz mas apropiado (por ejemplo, un modem LTE). El problema es que un nodo sólo puede enrutar tráfico estando en estado DESPIERTO ya que en estado DORMIDO no recibe ningún tipo de mensaje. De forma adicional, un nodo constantemente DESPIERTO consume mucha batería por lo que hay que mantener el mínimo número de nodos despiertos imprescindible para que la información pueda llegar a la pasarela. Se le pide que diseñe un algoritmo a ejecutar en cada uno de los nodos de la red, de forma que:
 
 Al final de la ejecución del algoritmo, un nodo decida si está DESPIERTO o DORMIDO.

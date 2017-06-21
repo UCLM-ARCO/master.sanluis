@@ -2,8 +2,8 @@
 Una de las principales labores a la hora de desarrollar un sistema
 distribuido es la definición de las interfaces y del protocolo de
 comunicaciones de nivel de aplicación entre las diversas partes que
-forman parte del sistema distribuido. El objetivo de este documento no
-es otro que mostrar un ejemplo sencillo del diseño y especificación de
+forman parte del sistema distribuido. El objetivo de esta sección no
+es otro que plantear un ejemplo sencillo del diseño y especificación de
 una interfaz de comunicaciones y un protocolo de comunicaciones para el
 control de forma remota de un coche desde una estación de control.
 \section{Especificación del protocolo}
@@ -32,31 +32,30 @@ La especificación debería incluir:
 \item Especificación de protocolos entre entidades (Si hay varias entidades usando diversos protocolos).
 \item Lista de tipos y formatos de los mensajes intercambiados entre entidades.
 \item Temporización describiendo la secuencia de intercambio de mensajes para cada servicio.
-\item Definición de interfaces y estructuras de datos en Protobuf.
+\item En nuestro caso, la definición de interfaces en slice y estructuras de datos en Protobuf.
 \end{itemize}
 
 De forma ideal, en protocolos complejos, se debería realizar una descripción formal de cara a eliminar incoherencias y a, en el mejor de los casos, automatizar la generación de las implementaciones y simplificar la verificación.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.8\textwidth]{overview.png}
-\caption{Protocolo a implementar} \label{fig:overview}
-\end{figure}
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=0.8\textwidth]{overview.png}
+%\caption{Protocolo a implementar} \label{fig:overview}
+%\end{figure}
 
 \section{Descripción genérica}
 Se trata de diseñar un protocolo de control, es decir, defina
 sintaxis, semántica y temporización para el control de un \emph{Unmanned
 Ground Vehicle (UGV)} de forma que la comunicación entre la \emph{Estación
 Base (EB)} y el vehículo permita monitorizarlo y controlarlo a través
-de la red de carreteras nacional. La estación base es un
+de una red de carreteras convencional. La estación base es un
 dispositivo de cómputo con los periféricos adecuados (por ejemplo,
 pantalla, teclado, volante/joystick, pedales, etc. ) que permitirá
-controlar un UGV a distancia.
+controlar un UGV a distancia. Dadas las inversiones en infraestructuras, las señales de tráfico envían información a los coches a través de un interfaz Bluetooth mediante un protocolo que también debe diseñar.
 \begin{itemize}
 \item Puede asumir que su protocolo se
-encapsulará sobre una conexión TCP/IP entre cada UGV y la EB.
+encapsulará sobre una conexión TCP/IP entre cada UGV y la EB. Puede asumir que
+su protocolo entre cada UGV y la infraestructura (señales de tráfico) se encapsulará sobre una conexión Bluetooth. 
 \item Cada UGV tendrá una dirección IP estática, única y conocida.
 \end{itemize}
-Para simplificar esta descripción el UGV es un coche de marchas
-convencional y asumimos que el lector conoce cómo se conduce un coche
-de este tipo de acuerdo a las normas internacionales de circulación.
+Para simplificar esta descripción el UGV es un coche de marchas convencional que ha sido convenientemente automatizado y asumimos que el lector conoce cómo se conduce un coche de este tipo de acuerdo a las normas internacionales de circulación.

@@ -1,5 +1,5 @@
 \documentclass[english]{arco-report}
-
+%\documentclass[spanish]{report}
 \usepackage{multirow}
 \usepackage{amsmath,amssymb,latexsym}
 %%\usepackage{tikz}
@@ -18,25 +18,27 @@
 
 %-- Or set fields one by one:
 \def \entityAcro{CCCP}
-\def \entityName{Master Universidad de San Luis}
-\def \entityLogo {\includegraphics[width=3cm]{/usr/share/arco/figures/arco_entity.pdf}}
-\def \entityWatermark {
-  \put(-55,-310){
-    \includegraphics[width=1.1\textwidth]{/usr/share/arco/figures/uclm_logo_watermark.pdf}}
-}
+\def \entityName{Especialización en sistemas embebidos}
+\def \entityLogo{\includegraphics[width=8cm]{./figures/logo.png}}
+%%{\includegraphics[width=3cm]{/usr/share/arco/figures/arco_entity.pdf}}
+
+%\def \entityWatermark {
+%  \put(-55,-310){
+%   \includegraphics[width=1.1\textwidth]{/usr/share/arco/figures/uclm_logo_watermark.pdf}}
+%}
 
 %-- You should identify your document too:
-\def \docTopic {Manuales de laboratorio}
+\def \docTopic {Tecnologías y Protocolos del Internet de las Cosas}
 \ISRN{San Luis}{1.0}
 % \docid{13.2}
 
-\title{Manuales de laboratorio}
-\author{felixjesus.villanueva@uclm.es}
-\date{Last modification 9/02/2017}
+\title{Manual de Actividades}
+\author{Félix Jesús Villanueva Molina}
+\date{Last modification 9/05/2017}
 
 \begin{document}
 \maketitle
-
+Este cuaderno de actividades ha sido diseñado para el curso de postgrado \emph{Tecnologías y Protocolos del Internet de las Cosas}, en el seno de  la carrera de posgrado \emph{Especialización en sistemas embebidos}. Este conjunto de actividades pretenden asentar los conocimientos impartidos en clase y aplicar dichos conocimientos a pequeños problemas.
 
 \input{iot-lab.tex}
 

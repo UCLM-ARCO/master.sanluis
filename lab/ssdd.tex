@@ -1,7 +1,7 @@
-\chapter{Laboratorio de Sistemas Distribuidos}
+\chapter{Sistemas Distribuidos para \emph{internet of things}}
 
 \section{Familiarización con sockets}
-
+Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultaneamente mediante la immplementación utilizando la primitiva select. 
 \section{Protocolos:máquinas de estados}
 
 La empresa QUIJOTECOFFE S.L ha decidido dar un paso mas en su proceso de I+D
@@ -31,4 +31,9 @@ y diseñar máquinas expendedoras de café cuya interacción será a través de 
 Copie su implementación anterior y modifiquela para que se use el
 servicio IceStorm.
 
-\section{}
+\section{Diseño de interfaces y gestión}
+Utilizando el middleware \textbf{ZeroC Ice} para el ejemplo de la máquina QUIJOTECOFFE S.L.  
+\begin{itemize}
+	\item Diseñe un interfaz slice para el protocolo definido.
+	\item Utilizando las herramientas de la ZeroC Ice y para la parte ejecutándose en la máquina expendedora de café, describa brevemente la forma de configurar el sistema para poder actualizar dicho software de forma remota. Por ejemplo, para 100 máquinas conectadas. 
+\end{itemize}
