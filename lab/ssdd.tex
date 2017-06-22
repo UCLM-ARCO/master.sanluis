@@ -1,11 +1,11 @@
 \chapter{Sistemas Distribuidos para \emph{internet of things}}
 
 \section{Familiarización con sockets}
-Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultaneamente mediante la immplementación utilizando la primitiva select. 
+Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultáneamente mediante la implementación utilizando la primitiva \emph{select}. 
 \section{Protocolos:máquinas de estados}
 
 La empresa QUIJOTECOFFE S.L ha decidido dar un paso mas en su proceso de I+D
-y diseñar máquinas expendedoras de café cuya interacción será a través de una App Android. La máquina no tendrá ningún tipo de botón físico/ranura para dinero, etc. sólo y exclusivamente el hueco por donde proporciona el café al usuario. La máquina está dotada de un modem Bluetooth con el que interacciona con el usuario y de un modem GPRS con el que informa al proveedor de mantenimiento acerca del estado de los suministros (café, leche, azucar, etc.) y estadísticas globales. Como ingeniero de diseño de I+D usted es el encargado del diseño del protocolo de comunicaciones y la máquina de estados.
+y diseñar máquinas expendedoras de café cuya interacción será a través de una App Android. La máquina no tendrá ningún tipo de botón físico/ranura para dinero, etc. sólo y exclusivamente el hueco por donde proporciona el café al usuario. La máquina está dotada de un módem Bluetooth con el que interacciona con el usuario y de un módem GPRS con el que informa al proveedor de mantenimiento acerca del estado de los suministros (café, leche, azúcar, etc.) y estadísticas globales. Como ingeniero de diseño de I+D usted es el encargado del diseño del protocolo de comunicaciones y la máquina de estados.
 \begin{itemize}
 \item Identifique las entidades del sistema y su relación
 \item Especifique los protocolos entre entidades y sus servicios
@@ -36,4 +36,13 @@ Utilizando el middleware \textbf{ZeroC Ice} para el ejemplo de la máquina QUIJO
 \begin{itemize}
 	\item Diseñe un interfaz slice para el protocolo definido.
 	\item Utilizando las herramientas de la ZeroC Ice y para la parte ejecutándose en la máquina expendedora de café, describa brevemente la forma de configurar el sistema para poder actualizar dicho software de forma remota. Por ejemplo, para 100 máquinas conectadas. 
+\end{itemize}
+
+
+\section{Coordinación}
+Utilizando el middleware \textbf{ZeroC Ice} y con el concepto de exclusión mutua basado en servidor central  
+\begin{itemize}
+	\item Diseñe un interfaz slice para el algoritmo junto con uno/varios compañeros.
+	\item Implemente un cliente/servidor para dicho algoritmo. Indique qué compañero implementa el servidor/cliente para su elección. Es decir, si usted implementa un cliente, indique quién implementa el servidor correspondiente.
+	\item Pruebe varios clientes/servidores. 
 \end{itemize}
