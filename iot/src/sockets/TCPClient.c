@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     serverPort = PORT;
     serviceSocket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-    server_name = gethostbyname("161.67.48.189");
+    server_name = gethostbyname("localhost");
     memset(&serverAddr, 0, sizeof(serverAddr));
     memcpy(&serverAddr.sin_addr, server_name->h_addr_list[0], server_name->h_length);
     serverAddr.sin_family = AF_INET;                

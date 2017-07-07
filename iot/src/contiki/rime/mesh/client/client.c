@@ -40,8 +40,10 @@ PROCESS_THREAD(client, ev, data)
   while(1){
     PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event && data == &button_sensor); 
     packetbuf_clear();
+    printf("Enviando paquete..\n");
     packetbuf_copyfrom(&mensaje, sizeof(mensaje));
     mesh_send(&mesh, &dst);
+    printf("Paquete enviado\n");
   }
   PROCESS_END();
 }

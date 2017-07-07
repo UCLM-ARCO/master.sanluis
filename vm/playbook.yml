@@ -23,8 +23,9 @@
     action: shell apt-get install -y linux-headers-$(uname -r)
   - name: install emacs
     apt: pkg=emacs state=latest
-  - name: NEO4J_REST_URL=http://localhost:7474/db/data/
-    lineinfile:
-      dest=/home/vagrant/.bashrc
-      regexp="^export NEO4J_REST_URL=http://neo4j:neo4j@localhost:7474/db/data"
-      line="export NEO4J_REST_URL=http://neo4j:neo4j@localhost:7474/db/data"
+  - name: install mercurial
+    apt: pkg=mercurial state=latest
+  - name: install java
+    apt: pkg=default-jdk state=latest
+    
+

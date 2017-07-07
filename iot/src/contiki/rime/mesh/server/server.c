@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+#define MESSAGE "Hola"
 #define COMUNICATION_CHANNEL 1000
 #define ON 1
 #define OFF 0
@@ -25,7 +25,11 @@ static void timeout(struct mesh_conn *c){
   return;
 }
 static void rcv(struct mesh_conn *c, const linkaddr_t *from, uint8_t hops){
-  printf("Recibido paquete\n");
+  printf("Data received from %d.%d: %.*s (%d)\n",
+         from->u8[0], from->u8[1],
+         packetbuf_datalen(), (char *)packetbuf_dataptr(), packetbuf_datalen());
+  packetbuf_copyfrom(MESSAGE, strlen(MESSAGE));
+  mesh_send(&mesh, from);
   cambio(ON);
   return;
 }
@@ -43,6 +47,7 @@ PROCESS_THREAD(server, ev, data)
   mesh_open(&mesh, COMUNICATION_CHANNEL, &callbacks);
   etimer_set(&timer, 10*CLOCK_SECOND);
   while(1){
+    //PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event && data == &button_sensor); 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
     cambio(OFF);
