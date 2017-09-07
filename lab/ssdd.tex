@@ -2,7 +2,7 @@
 
 \section{Familiarización con sockets [20 puntos]}
 
-Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultáneamente mediante la implementación utilizando la primitiva \emph{select}. 
+Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultáneamente mediante la implementación utilizando la primitiva \emph{select}. El archivo TCPServer.c se encuentra dentro del directorio iot/src/sockets/ en el repositorio del master.
 
 \subsection{A entregar}
 Archivo TCPServer.c modificado.
@@ -24,7 +24,7 @@ Documento con la especificación del sistema.
 
 \section{RMI: Cliente y Servidor Básico en Ice [20 puntos]}
 \begin{itemize}
-\item Ejecutar slice2py iot.ice
+\item Ejecutar slice2py iot.ice. El archivo iot.ice se encuentra dentro del directorio /ssdd/src/sensor/ del repositorio del master.
 \item Implementar en un archivo denominado servidor.py un servidor para la interfaz DigitalSink
 \item Implementar un cliente denominado cliente.py que invoque la interfaz update del servidor DigitalSink que usted ha implementado rellenando solo el valor que actualiza.
 \item Pruebe su cliente con el servidor implementado por sus compañeros cambiando el endpoint.
@@ -54,7 +54,7 @@ Utilizando el middleware \textbf{ZeroC Ice} para el ejemplo de la máquina QUIJO
 \end{itemize}
 
 \subsection{A entregar}
-Un zip con la interfaz quijote.ice y un documento explicando la solución a la segunda cuestión planteada.
+Un zip con la interfaz en un archivo que nombraremos quijote.ice y un documento explicando la solución a la segunda cuestión planteada.
 
 \section{Coordinación [20 puntos]}
 Utilizando el middleware \textbf{ZeroC Ice} y con el concepto de exclusión mutua basado en servidor central  
