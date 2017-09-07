@@ -1,6 +1,6 @@
 \chapter{Arquitectura de \emph{Internet of Things}}
 
-\section{Simulación de parámetros de red inalámbrica}
+\section{Simulación de parámetros de red inalámbrica [20 puntos]}
 \begin{itemize}
 	\item Instale el simulador de redes ns3
 	\item en ns-3.26 /examples/stats puede encontrar un buen ejemplo de un proceso de simulación que incluye:
@@ -25,7 +25,6 @@
 	300 350 400 450 500 600 750 1000
 	\item reduzca el número de simulaciones por cada distancia de 5 a 1
 	\item ajuste el eje x para mostrar las nuevas simulaciones en el script gnuplot.
-	\item 
 \end{itemize}
 
 A continuación vamos a cambiar la simulación propiamente dicha. Para el siguiente código:
@@ -57,7 +56,10 @@ a cambiar el modelo de propagación (linea 8). Para ello:
 	\item Pruebe otro modelo de propagación (compruebe el método AddPropagationLoss de la clase YansWifiChannelHelper) y muestre un gráfico comparando el resultado de YansWifiChannel con el modelo de propagación por defecto y el modelo de propagación escogido por usted.  
 \end{itemize}
 
-\section{Diseño de arquitectura de aplicaciones}
+\subsection{A entregar}
+Documento con los graficos resultado de las simulaciones realizadas y contestando a las preguntas. Incluya el código modificado (sólo la parte modificado).
+
+\section{Diseño de arquitectura de aplicaciones [10 puntos]}
 Para las siguientes aplicaciones, esboce la arquitectura del sistema, proponga un nodo/Tecnología de conectividad/pasarela. Analice el coste de la solución propuesta en cuanto al hardware.
 \begin{itemize}
 \item Localización de ganado bobino en áreas rurales con el objeto de análisis de patrones de comportamiento (localización). El punto de control se encuentra en la propia granja.
@@ -67,7 +69,10 @@ Para las siguientes aplicaciones, esboce la arquitectura del sistema, proponga u
 \item Gestión inteligente de tráfico (control de semáforos, sensores de tráfico, señalización inteligente, etc.) El ayuntamiento analiza la información, la interacción entre semáforos, tráfico y señalización inteligente es entre el vehículo y la infraestructura.
 \end{itemize}
 
-\section{Configuración de la Pasarela/s}
+\subsection{A entregar}
+Documento contestando razonadamente a las preguntas anteriores.
+
+\section{Configuración de la Pasarela/s [10 puntos]}
 \begin{itemize}
 \item Como forma de tolerancia a fallos, usted decide poner tres pasarelas entre su red IoT e Internet.
   \begin{itemize}
@@ -78,7 +83,10 @@ Para las siguientes aplicaciones, esboce la arquitectura del sistema, proponga u
   \end{itemize}
 \end{itemize}
 
-\section{MQTT}
+\subsection{A entregar}
+Documento contestando razonadamente a las preguntas anteriores.
+
+\section{MQTT [10 puntos]}
 \begin{itemize}
 	\item Atendiendo a la dirección de red del broker MQTT, envíe un mensaje a Argentina/SanLuis/USL/master con su nombre completo.
 	\item 5 clientes denominados A,B,C,D y E se han subscrito a los eventos MQTT en los siguientes canales:
@@ -103,8 +111,10 @@ Para las siguientes aplicaciones, esboce la arquitectura del sistema, proponga u
 		\item ?
 	\end{itemize}
 \end{itemize}
+\subsection{A entregar}
+Documento contestando razonadamente a las preguntas anteriores.
 
-\section{Gestión de topologías Ad-Hoc}
+\section{Gestión de topologías Ad-Hoc [20 puntos]}
 Las redes de sensores inalámbricas son unas redes formadas por nodos de bajo coste dotados con una tecnología inalámbrica (por ejemplo 802.15.4e). Una de las configuraciones mas habituales de ese tipo de redes es la comunicación multisalto. Esta configuración es usada para extender el alcance de comunicación de cada uno de los nodos gracias a que cada uno de los nodos enruta la información del resto hacia la pasarela. La pasarela envía toda la información a través de un interfaz mas apropiado (por ejemplo, un modem LTE). El problema es que un nodo sólo puede enrutar tráfico estando en estado DESPIERTO ya que en estado DORMIDO no recibe ningún tipo de mensaje. De forma adicional, un nodo constantemente DESPIERTO consume mucha batería por lo que hay que mantener el mínimo número de nodos despiertos imprescindible para que la información pueda llegar a la pasarela. Se le pide que diseñe un algoritmo a ejecutar en cada uno de los nodos de la red, de forma que:
 \begin{itemize}
 \item Al final de la ejecución del algoritmo, un nodo decida si está DESPIERTO o DORMIDO.
@@ -122,7 +132,8 @@ Debe entregar el pseudocodigo de la solución.
 	\label{fig:adhoc}
 \end{figure}
 
-
+\subsection{A entregar}
+Documento con el diseño detallado del protocolo y el algoritmo a implementar en cada uno de los nodos, puede escribir este algoritmo en pseudocódigo.
 
 % Local Variables:
 %   coding: utf-8

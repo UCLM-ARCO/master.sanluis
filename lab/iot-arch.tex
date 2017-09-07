@@ -1,8 +1,8 @@
 \chapter{Internet of Things laboratorio}
 
-\section{Pasarela}
+\section{Pasarela [10 puntos]}
 \begin{itemize}
-\item Como forma de tolerancia a fallos, usted decide poner tres pasarelas entre su red IoT e Internet.
+\item Como forma de tolerancia a fallos, usted decide poner tres pasarelas entre su red inalámbrica de IoT e Internet.
   \begin{itemize}
   \item ¿Cómo evito que me llegen los mensajes por triplicado?
   \item ¿Necesito enviar tres mensajes distintos desde un sensor?
@@ -10,7 +10,7 @@
   \end{itemize}
 \end{itemize}
 
-\section{MQTT}
+
 
 \section{Topología}
 Las redes de sensores inalámbricas son unas redes formadas por nodos de bajo coste dotados con una tecnología inalámbrica (por ejemplo 802.15.4e). Una de las configuraciones mas habituales de ese tipo de redes es la comunicación multisalto. Esta configuración es usada para extender el alcance de comunicación de cada uno de los nodos gracias a que cada uno de los nodos enruta la información del resto hacia la pasarela. La pasarela envía toda la información a través de un interfaz mas apropiado (por ejemplo, un modem LTE). El problema es que un nodo sólo puede enrutar tráfico estando en estado DESPIERTO ya que en estado DORMIDO no recibe ningún tipo de mensaje. De forma adicional, un nodo constantemente DESPIERTO consume mucha batería por lo que hay que mantener el mínimo número de nodos despiertos imprescindible para que la información pueda llegar a la pasarela. Se le pide que diseñe un algoritmo a ejecutar en cada uno de los nodos de la red, de forma que:

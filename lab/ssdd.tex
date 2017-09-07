@@ -1,8 +1,13 @@
 \chapter{Sistemas Distribuidos para \emph{internet of things}}
 
-\section{Familiarización con sockets}
+\section{Familiarización con sockets [20 puntos]}
+
 Tome como referencia el archivo TCPServer.c y modifiquelo para que atienda a varios clientes de forma simultáneamente mediante la implementación utilizando la primitiva \emph{select}. 
-\section{Protocolos:máquinas de estados}
+
+\subsection{A entregar}
+Archivo TCPServer.c modificado.
+
+\section{Protocolos:máquinas de estados[10 puntos]}
 
 La empresa QUIJOTECOFFE S.L ha decidido dar un paso mas en su proceso de I+D
 y diseñar máquinas expendedoras de café cuya interacción será a través de una App Android. La máquina no tendrá ningún tipo de botón físico/ranura para dinero, etc. sólo y exclusivamente el hueco por donde proporciona el café al usuario. La máquina está dotada de un módem Bluetooth con el que interacciona con el usuario y de un módem GPRS con el que informa al proveedor de mantenimiento acerca del estado de los suministros (café, leche, azúcar, etc.) y estadísticas globales. Como ingeniero de diseño de I+D usted es el encargado del diseño del protocolo de comunicaciones y la máquina de estados.
@@ -13,7 +18,11 @@ y diseñar máquinas expendedoras de café cuya interacción será a través de 
 \item Dibuje la máquina de estados de la máquina de café. 
 \end{itemize}
 
-\section{RMI: Cliente y Servidor Básico en Ice}
+\subsection{A entregar}
+
+Documento con la especificación del sistema. 
+
+\section{RMI: Cliente y Servidor Básico en Ice [20 puntos]}
 \begin{itemize}
 \item Ejecutar slice2py iot.ice
 \item Implementar en un archivo denominado servidor.py un servidor para la interfaz DigitalSink
@@ -26,23 +35,34 @@ y diseñar máquinas expendedoras de café cuya interacción será a través de 
   \item Haga una invocación completa (añadiendo metadatos).
 \end{itemize}
 
-\section{Comunicación indirecta: IceStorm}
+\subsection{A entregar}
+Un zip con los archivos servidor.py y cliente.py además de un breve documento contestando a las preguntas.
+
+\section{Comunicación indirecta: IceStorm [20 puntos]}
 
 Copie su implementación anterior y modifiquela para que se use el
 servicio IceStorm.
 
-\section{Diseño de interfaces y gestión}
+\subsection{A entregar}
+Un zip con los archivos servidor.py y cliente.py modificados.
+
+\section{Diseño de interfaces y gestión [10 puntos]}
 Utilizando el middleware \textbf{ZeroC Ice} para el ejemplo de la máquina QUIJOTECOFFE S.L.  
 \begin{itemize}
 	\item Diseñe un interfaz slice para el protocolo definido.
 	\item Utilizando las herramientas de la ZeroC Ice y para la parte ejecutándose en la máquina expendedora de café, describa brevemente la forma de configurar el sistema para poder actualizar dicho software de forma remota. Por ejemplo, para 100 máquinas conectadas. 
 \end{itemize}
 
+\subsection{A entregar}
+Un zip con la interfaz quijote.ice y un documento explicando la solución a la segunda cuestión planteada.
 
-\section{Coordinación}
+\section{Coordinación [20 puntos]}
 Utilizando el middleware \textbf{ZeroC Ice} y con el concepto de exclusión mutua basado en servidor central  
 \begin{itemize}
 	\item Diseñe un interfaz slice para el algoritmo junto con uno/varios compañeros.
 	\item Implemente un cliente/servidor para dicho algoritmo. Indique qué compañero implementa el servidor/cliente para su elección. Es decir, si usted implementa un cliente, indique quién implementa el servidor correspondiente.
-	\item Pruebe varios clientes/servidores. 
+	\item Pruebe varios clientes/servidores de sus compañeros. 
 \end{itemize}
+
+\subsection{A entregar}
+Un zip con el archivo cliente.py/servidor.py .
